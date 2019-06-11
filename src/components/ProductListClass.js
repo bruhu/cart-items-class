@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./ProductListClass.css"
 
 export default class ProductListClass extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ export default class ProductListClass extends Component {
           )}
           <h2>Products</h2>
           {this.state.products.map(product => (
-            <p key={product.id} onClick={() => this.addToCart(product)}>
+            <p className="product-name" key={product.id} onClick={() => this.addToCart(product)}>
               {product.name}
             </p>
           ))}
